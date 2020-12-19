@@ -1,6 +1,6 @@
 # Python Flask E-Commerce Website
 
-A simple e-commerce website using Flask, Jinja2, SQLite, JavaScript, Bootstrap and Python.
+A simple e-commerce website using Flask, Jinja2, SQLite, jQuery, Bootstrap and Python.
 
 The application loads a gallery of clothing items that includes: image, name, price, and a small form to add clothing items to shopping cart. The clothing information is stored in a SQLite database and is displayed using Bootstrap's card class.
 
