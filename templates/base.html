@@ -37,7 +37,7 @@
                       <tr>
                         <th scope="col">#</th>
                         <th scope="col">Item</th>
-                        <th scope="col">Team</th>
+                        <th scope="col">samplename</th>
                         <th scope="col">Quantity</th>
                         <th scope="col">Unit Price</th>
                         <th scope="col">Sub-Total</th>
@@ -50,8 +50,8 @@
                     {% for i in range(shopLen) %}
                       <tr>
                         <th scope="row">{{ i + 1 }}</th>
-                        <td><img src="/static/img/{{ shoppingCart[i]["image"] }}" width="30px" alt="{{ shoppingCart[i]["team"] }}" /></td>
-                        <td>{{ shoppingCart[i]["team"] }}</td>
+                        <td><img src="/static/img/{{ shoppingCart[i]["image"] }}" width="30px" alt="{{ shoppingCart[i]["samplename"] }}" /></td>
+                        <td>{{ shoppingCart[i]["samplename"] }}</td>
                         <td>{{ shoppingCart[i]['SUM(qty)'] }}</td>
                         <td>{{ '${:,.2f}'.format(shoppingCart[i]["price"]) }}</td>
                         <td>{{ '${:,.2f}'.format(shoppingCart[i]['SUM(subTotal)']) }}</td><!--

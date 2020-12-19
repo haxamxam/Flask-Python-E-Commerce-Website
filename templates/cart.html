@@ -24,7 +24,7 @@ Soccer Jersey Store - Home
                       <tr>
                         <th scope="col">#</th>
                         <th scope="col">Item</th>
-                        <th scope="col">Team</th>
+                        <th scope="col">samplename</th>
                         <th scope="col">Quantity</th>
                         <th scope="col">Unit Price</th>
                         <th scope="col">Sub-Total</th>
@@ -37,8 +37,8 @@ Soccer Jersey Store - Home
                     {% for i in range(shopLen) %}
                       <tr>
                         <th scope="row">{{ i + 1 }}</th>
-                        <td><img src="/static/img/{{ shoppingCart[i]["image"] }}" width="30px" alt="{{ shoppingCart[i]["team"] }}" /></td>
-                        <td>{{ shoppingCart[i]["team"] }}</td>
+                        <td><img src="/static/img/{{ shoppingCart[i]["image"] }}" width="30px" alt="{{ shoppingCart[i]["samplename"] }}" /></td>
+                        <td>{{ shoppingCart[i]["samplename"] }}</td>
                         <td><form action="/update/">
                             <input type="hidden" name="id" value="{{shoppingCart[i]["id"]}}" />
                             <input type="number" name="quantity" min="1" max="10" size="5" value="{{ shoppingCart[i]['SUM(qty)'] }}">
