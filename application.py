@@ -17,7 +17,7 @@ db = SQL ( "sqlite:///data.db" )
 
 @app.route("/")
 def index():
-    shirts = db.execute("SELECT * FROM shirts ORDER BY price ASC")
+    shirts = db.execute("SELECT * FROM shirts ORDER BY onSalePrice")
     shirtsLen = len(shirts)
     # Initialize variables
     shoppingCart = []
@@ -29,7 +29,7 @@ def index():
         for i in range(shopLen):
             total += shoppingCart[i]["SUM(subTotal)"]
             totItems += shoppingCart[i]["SUM(qty)"]
-        shirts = db.execute("SELECT * FROM shirts ORDER BY team ASC")
+        shirts = db.execute("SELECT * FROM shirts ORDER BY onSalePrice ASC")
         shirtsLen = len(shirts)
         return render_template ("index.html", shoppingCart=shoppingCart, shirts=shirts, shopLen=shopLen, shirtsLen=shirtsLen, total=total, totItems=totItems, display=display, session=session )
     return render_template ( "index.html", shirts=shirts, shoppingCart=shoppingCart, shirtsLen=shirtsLen, shopLen=shopLen, total=total, totItems=totItems, display=display)
@@ -109,7 +109,7 @@ def update():
 def filter():
     if request.args.get('continent'):
         query = request.args.get('continent')
-        shirts = db.execute("SELECT * FROM shirts WHERE continent = :query ORDER BY team ASC", query=query )
+        shirts = db.execute("SELECT * FROM shirts WHERE typeClothes = :query ORDER BY team ASC", query=query )
     if request.args.get('sale'):
         query = request.args.get('sale')
         shirts = db.execute("SELECT * FROM shirts WHERE onSale = :query ORDER BY team ASC", query=query)
