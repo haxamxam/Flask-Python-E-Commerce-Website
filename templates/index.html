@@ -6,6 +6,9 @@ Soccer Jersey Store - Home
 
 {% block body %}
 <!-- Main Store Body -->
+    {% if session['user'] %}
+    <span class="user">Welcome, {{ session['user'] }}</span>
+    {% endif %}
       <div class="row" id="shirtCard">
       {% for i in range(shirtsLen) %}
           <div class="col-sm">
@@ -30,6 +33,7 @@ Soccer Jersey Store - Home
                       <input type="hidden" name="loggedin" value="0" />
                       {% else %}
                       <input type="hidden" name="loggedin" value="1" />
+
                       {% endif %}
                       <input type="submit" class="btn btn-primary addToCart" value="Add To Cart" /><br /><br />
                       <div class="alert alert-danger flashMessage" style="text-align: center; display:none; font-size:0.9em;"></div>

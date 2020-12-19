@@ -14,9 +14,10 @@ Session(app)
 # Creates a connection to the database
 db = SQL ( "sqlite:///data.db" )
 
+
 @app.route("/")
 def index():
-    shirts = db.execute("SELECT * FROM shirts ORDER BY team ASC")
+    shirts = db.execute("SELECT * FROM shirts ORDER BY price ASC")
     shirtsLen = len(shirts)
     # Initialize variables
     shoppingCart = []
