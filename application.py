@@ -107,8 +107,8 @@ def update():
 
 @app.route("/filter/")
 def filter():
-    if request.args.get('continent'):
-        query = request.args.get('continent')
+    if request.args.get('typeClothes'):
+        query = request.args.get('typeClothes')
         shirts = db.execute("SELECT * FROM shirts WHERE typeClothes = :query ORDER BY team ASC", query=query )
     if request.args.get('sale'):
         query = request.args.get('sale')
