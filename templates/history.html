@@ -15,7 +15,7 @@ Soccer Jersey Store - Home
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">Item</th>
-                <th scope="col">Team</th>
+                <th scope="col">Name</th>
                 <th scope="col">Quantity</th>
                 <th scope="col">Date</th>
                 <th scope="col"></th>
@@ -26,8 +26,8 @@ Soccer Jersey Store - Home
             {% for i in range(myShirtsLen) %}
               <tr>
                 <th scope="row">{{ i + 1 }}</th>
-                <td><img src="/static/img/{{ myShirts[i]["image"] }}" width="30px" alt="{{ myShirts[i]["team"] }}" /></td>
-                <td>{{ myShirts[i]["team"] }}</td>
+                <td><img src="/static/img/{{ myShirts[i]["image"] }}" width="30px" alt="{{ myShirts[i]["samplename"] }}" /></td>
+                <td>{{ myShirts[i]["samplename"] }}</td>
                 <td>{{ myShirts[i]["quantity"] }}</td>
                 <td>{{ myShirts[i]["date"] }}</td>
                 <td><a href="/filter/?id={{ myShirts[i]["id"] }}"><button type="button" class="btn btn-warning">Buy Again</button></a></td>
