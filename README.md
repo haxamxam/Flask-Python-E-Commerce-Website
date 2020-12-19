@@ -2,12 +2,12 @@
 
 A simple e-commerce website using Flask, Jinja2, SQLite, JavaScript, Bootstrap and Python.
 
-The application loads a gallery of clothing items that includes: image, name, price, and a small form to add item to cart. The shirt info is stored in a SQLite database and is displayed using Bootstrap's card class.
+The application loads a gallery of clothing items that includes: image, name, price, and a small form to add clothing items to shopping cart. The clothing information is stored in a SQLite database and is displayed using Bootstrap's card class.
 
-The application contains filters that were implemented through SQLite queries so that the user can scroll through the items according to different categories.
+The application contains filters that were implemented through SQLite queries so that the user can scroll through the items according to different categories such as, Shirts, Pants, Shoes, Price etc.
 
 <p align="center">
-  <img src="https://github.com/haxamxam/Flask-Python-E-Commerce/blob/master/clothing.png" width="600" alt="accessibility text">
+  <img src="https://github.com/haxamxam/Flask-Python-E-Commerce/blob/master/clothing.png" width="700" height="500" alt="accessibility text">
 </p>
 
 The application can be visited here:
