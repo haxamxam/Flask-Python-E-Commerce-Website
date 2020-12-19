@@ -49,7 +49,7 @@ function validate ( )
 {
     let valid = true;
     reset_form ( );
-    SUBMIT.hide();
+
 
     // This currently checks to see if the username is
     // present and if it is at least 5 characters in length.

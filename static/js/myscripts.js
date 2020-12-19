@@ -27,7 +27,7 @@ $('.addToCart').on("click", function(event) {
     console.log('hello');
     if($(this).prev().prev().prev().find("input").val() == '0') {
         event.preventDefault();
-        $(this).next().next().next().html("You need to select at least one shirt.");
+        $(this).next().next().next().html("You need to select at least one clothing.");
         $(this).next().next().next().css("display", "block");
         $(this).next().next().next().delay(3000).slideUp();
     }
