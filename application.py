@@ -271,13 +271,3 @@ def cart():
     return render_template("cart.html", shoppingCart=shoppingCart, shopLen=shopLen, total=total, totItems=totItems, display=display, session=session)
 
 
-# @app.errorhandler(404)
-# def pageNotFound( e ):
-#     if 'user' in session:
-#         return render_template ( "404.html", session=session )
-#     return render_template ( "404.html" ), 404
-
-
-# Only needed if Flask run is not used to execute the server
-#if __name__ == "__main__":
-#    app.run( host='0.0.0.0', port=8080 )
