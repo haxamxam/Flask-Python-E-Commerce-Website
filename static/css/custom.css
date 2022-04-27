@@ -14,7 +14,7 @@
 }
 
 .price:before {
-    content: '$';
+    content: '₹';
 }
 
 .shirt {
